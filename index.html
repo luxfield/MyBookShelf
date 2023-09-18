@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <header class="header-buku">
+            <h2>Mybookshelf App</h1>
+        </header>
+        <section class="input-buku">
+            <form action="index.html" method="post" id="form-buku">
+                <div class="form-input-buku">
+                    <label for="nama-buku">Nama Buku : </label>
+                    <input type="text" name="nama-buku" id="judul" required placeholder="Masukkan judul buku"
+                        oninvalid="this.setCustomValidity('Masukkan judul buku')" oninput="this.setCustomValidity('')">
+                </div>
+                <div class="form-input-buku">
+                    <label for="nama-buku">Nama Penulis : </label>
+                    <input type="text" name="nama-buku" id="penulis" required placeholder="Masukkan penulis buku"
+                        oninvalid="this.setCustomValidity('Masukkan penulis buku')"
+                        oninput="this.setCustomValidity('')">
+                </div>
+                <div class="form-input-buku">
+                    <label for="nama-buku">Tahun Terbit : </label>
+                    <input type="number" name="nama-buku" id="tahun" required placeholder="Masukkan tahun terbit buku"
+                        oninvalid="this.setCustomValidity('Masukkan tahun terbit buku')"
+                        oninput="this.setCustomValidity('')">
+                </div>
+                <div class="form-checkbox-buku">
+                    <label for="status-baca">Selesai Dibaca</label>
+                    <input type="checkbox" name="status-baca" id="status-baca" value="false" onclick="ubahstatus()">
+                </div>
+                <button type="submit" name="submit" id="submit">Masukkan buku ke Rak <b>Belum dibaca</b></button>
+            </form>
+        </section>
+        <section>
+            <div class="form-cari-buku">
+                <h1>Cari Buku</h1>
+                <form>
+                    <label for="cari-buku">Judul Buku : </label>
+                    <input type="text" name="cari-buku" id="cari-buku" placeholder="cari judul buku">
+                    <input type="button" value="Cari" onclick="cariBuku()">
+                </form>
+
+            </div>
+        </section>
+
+        <section class="daftar-buku">
+            <h2>Belum selesai dibaca </h2>
+            <div id="belum-dibaca">
+
+            </div>
+
+        </section>
+        <section class="daftar-buku">
+            <h2>Selesai dibaca</h2>
+            <div id="sudah-dibaca">
+
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        &copy; 2023
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
